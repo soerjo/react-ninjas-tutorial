@@ -1,8 +1,12 @@
-import logo from "./logo.svg";
 import "./App.css";
+import ContainerData from "./components/ContainerData";
 
 function App() {
-  return <div>Hallo dunia</div>;
+  return (
+    <div>
+      <ContainerData />
+    </div>
+  );
 }
 
 export default App;
