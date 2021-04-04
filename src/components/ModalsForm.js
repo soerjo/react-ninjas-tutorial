@@ -52,11 +52,11 @@ const useStyles = makeStyles((theme) => ({
 export default function ModalForm({ form, open, handleClose, handleSubmit }) {
   const classes = useStyles();
   const [selectedDate, setSelectedDate] = useState(new Date());
-  const [ibadah, setIbadah] = useState("");
+  const [ibadah, setIbadah] = useState(form);
   // console.log("isi dari form", props.form);
 
   const handleSelectChange = (e) => {
-    setIbadah(e.target.value);
+    // setIbadah(e.target.value);
   };
   const handleDateChange = (date) => {
     setSelectedDate(date);
@@ -74,6 +74,7 @@ export default function ModalForm({ form, open, handleClose, handleSubmit }) {
     <div>
       {console.log("isi dari handleSubmit", handleSubmit)}{" "}
       {console.log("isi form modal: ", form)}
+      {console.log("isi ibadah modal: ", ibadah)}
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
