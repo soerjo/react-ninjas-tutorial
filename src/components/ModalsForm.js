@@ -62,6 +62,11 @@ export default function ModalForm({ form, open, handleClose, handleSubmit }) {
     setSelectedDate(date);
   };
 
+  const handleAllChange = (e) => {
+    const isi = e.target.value;
+    console.log("isi dari nilai: ", isi);
+  };
+
   const handleTombolSubmit = (e) => {
     e.preventDefault();
     console.log("handle donk...");
@@ -101,6 +106,7 @@ export default function ModalForm({ form, open, handleClose, handleSubmit }) {
                 label="Nama"
                 defaultValue="Masukan Nama"
                 variant="outlined"
+                onChange={handleAllChange}
               />
               <TextField
                 required
